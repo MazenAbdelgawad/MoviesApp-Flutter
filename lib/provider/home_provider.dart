@@ -1,8 +1,7 @@
 import 'dart:async';
 
-import 'package:flutter/cupertino.dart';
-import 'package:fluttermovielab3/data_access_layer/model/movie.dart';
-import 'package:fluttermovielab3/data_access_layer/network/movie_network.dart';
+import 'package:fluttermovielab4/data_access_layer/model/movie.dart';
+import 'package:fluttermovielab4/data_access_layer/network/movie_network.dart';
 
 class HomeProvider{
     StreamController<List<Movie>> moviesController = StreamController();

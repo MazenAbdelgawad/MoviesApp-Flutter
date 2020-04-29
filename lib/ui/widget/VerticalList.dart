@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'package:fluttermovielab3/data_access_layer/model/movie.dart';
-import 'package:fluttermovielab3/provider/home_provider.dart';
+import 'package:fluttermovielab4/data_access_layer/model/movie.dart';
+import 'package:fluttermovielab4/provider/home_provider.dart';
 import 'VerticalListItem.dart';
 
 class VerticalList extends StatelessWidget {

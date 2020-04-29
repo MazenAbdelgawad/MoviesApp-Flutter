@@ -1,6 +1,6 @@
 
-import 'package:fluttermovielab3/data_access_layer/model/movie.dart';
-import 'package:fluttermovielab3/data_access_layer/network/http_client.dart';
+import 'package:fluttermovielab4/data_access_layer/model/movie.dart';
+import 'package:fluttermovielab4/data_access_layer/network/http_client.dart';
 
 class MovieNetwork{
   String url = 'https://api.androidhive.info/json/movies.json';
