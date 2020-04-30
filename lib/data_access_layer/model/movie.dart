@@ -3,34 +3,22 @@ import 'dart:convert';
 //Movie movieFromJson(String str) => Movie.fromJson(json.decode(str));
 //String movieToJson(Movie data) => json.encode(data.toJson());
 
+
 class Movie {
+  String posterPath;
+  int id;
   String title;
-  String image;
-  double rating;
-  int releaseYear;
-  List<String> genre;
+  String overview;
+  DateTime releaseDate;
+  double voteAverage;
 
   Movie({
+    this.id,
     this.title,
-    this.image,
-    this.rating,
-    this.releaseYear,
-    this.genre,
+    this.overview,
+    this.releaseDate,
+    this.posterPath,
+    this.voteAverage
   });
 
-  factory Movie.fromJson(Map<String, dynamic> json) => Movie(
-    title: json["title"],
-    image: json["image"],
-    rating: json["rating"]?.toDouble() ?? 0.0,
-    releaseYear: json["releaseYear"],
-    genre: List<String>.from(json["genre"].map((x) => x)),
-  );
-
-  Map<String, dynamic> toJson() => {
-    "title": title,
-    "image": image,
-    "rating": rating,
-    "releaseYear": releaseYear,
-    "genre": List<dynamic>.from(genre.map((x) => x)),
-  };
 }

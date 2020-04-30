@@ -35,7 +35,10 @@ class VerticalList extends StatelessWidget {
         shrinkWrap: false,
         itemBuilder: (context, index) {
           return VerticalListItem(
-              list[index].title, list[index].image, list[index].releaseYear);
+              list[index].title,
+              list[index].posterPath,
+              list[index].releaseDate,
+              list[index].voteAverage);
         });
   }
 }

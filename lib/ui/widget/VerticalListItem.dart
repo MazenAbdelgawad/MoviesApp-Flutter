@@ -4,22 +4,24 @@ import 'package:flutter/material.dart';
 class VerticalListItem extends StatefulWidget {
   String title;
   String imgUrl;
-  int releaseYear;
+  double voteAverage;
+  DateTime releaseYear;
 
-  VerticalListItem(this.title, this.imgUrl, this.releaseYear);
+  VerticalListItem(this.title, this.imgUrl, this.releaseYear,this.voteAverage);
 
   @override
   VerticalListItemState createState() =>
-      VerticalListItemState(this.title, this.imgUrl, this.releaseYear);
+      VerticalListItemState(this.title, this.imgUrl, this.releaseYear,this.voteAverage);
 }
 
 class VerticalListItemState extends State<VerticalListItem> {
   String title;
   String imgUrl;
-  int releaseYear;
+  DateTime releaseYear;
+  double voteAverage;
   bool saved;
 
-  VerticalListItemState(this.title, this.imgUrl, this.releaseYear) {
+  VerticalListItemState(this.title, this.imgUrl, this.releaseYear,this.voteAverage) {
     saved = false;
   }
 
@@ -71,10 +73,19 @@ class VerticalListItemState extends State<VerticalListItem> {
                         //Container(
                         //alignment: Alignment.topLeft,
                         //child:
-                        Text("Release Year: $releaseYear ",
+                        Text("Release on: ${releaseYear.toString().substring(0,10)} ",
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.start),
                         // ),
+                        SizedBox(
+                          height: 3,
+                        ),
+                        //Container(
+                        //alignment: Alignment.topLeft,
+                        //child:
+                        Text("Rate: ${voteAverage} ",
+                            overflow: TextOverflow.ellipsis,
+                            textAlign: TextAlign.start),
                       ],
                     ),
                   ),
