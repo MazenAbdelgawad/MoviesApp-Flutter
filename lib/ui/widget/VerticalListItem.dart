@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class VerticalListItem extends StatefulWidget {
   String title;
@@ -7,11 +8,11 @@ class VerticalListItem extends StatefulWidget {
   double voteAverage;
   DateTime releaseYear;
 
-  VerticalListItem(this.title, this.imgUrl, this.releaseYear,this.voteAverage);
+  VerticalListItem(this.title, this.imgUrl, this.releaseYear, this.voteAverage);
 
   @override
-  VerticalListItemState createState() =>
-      VerticalListItemState(this.title, this.imgUrl, this.releaseYear,this.voteAverage);
+  VerticalListItemState createState() => VerticalListItemState(
+      this.title, this.imgUrl, this.releaseYear, this.voteAverage);
 }
 
 class VerticalListItemState extends State<VerticalListItem> {
@@ -21,7 +22,8 @@ class VerticalListItemState extends State<VerticalListItem> {
   double voteAverage;
   bool saved;
 
-  VerticalListItemState(this.title, this.imgUrl, this.releaseYear,this.voteAverage) {
+  VerticalListItemState(
+      this.title, this.imgUrl, this.releaseYear, this.voteAverage) {
     saved = false;
   }
 
@@ -73,25 +75,32 @@ class VerticalListItemState extends State<VerticalListItem> {
                         //Container(
                         //alignment: Alignment.topLeft,
                         //child:
-                        Text("Release on: ${releaseYear.toString().substring(0,10)} ",
+                        Text(
+                            "Release on: ${releaseYear.toString().substring(0, 10)} ",
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.start),
                         // ),
                         SizedBox(
                           height: 3,
                         ),
-                        //Container(
-                        //alignment: Alignment.topLeft,
-                        //child:
-                        Text("Rate: ${voteAverage} ",
-                            overflow: TextOverflow.ellipsis,
-                            textAlign: TextAlign.start),
+                        RatingBar(
+                          itemSize: 22,
+                          initialRating: (voteAverage/2),
+                          direction: Axis.horizontal,
+                          allowHalfRating: true,
+                          itemCount: 5,
+                          itemBuilder: (context, _) => Icon(
+                            Icons.star,
+                            color: Colors.amber,
+                          ),
+                        ),
                       ],
                     ),
                   ),
                   Container(
                     child: IconButton(
-                      icon: Icon(saved ? Icons.favorite : Icons.favorite_border),
+                      icon:
+                          Icon(saved ? Icons.favorite : Icons.favorite_border),
                       color: saved ? Colors.red : null,
                       onPressed: () {
                         setState(() {
