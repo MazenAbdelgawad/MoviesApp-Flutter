@@ -9,13 +9,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Movie',
+      title: 'Movie App',
       theme: ThemeData(
         primaryColor: Colors.blueAccent, //add2
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Movie"),
+          title: Text("Movie App"),
         ),
         body: SafeArea(
           child: Container(

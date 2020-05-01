@@ -36,8 +36,8 @@ class VerticalListItemState extends State<VerticalListItem> {
         //mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Container(
-            width: 80,
-            height: 80,
+            width: 85,
+            height: 85,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.0),
                 shape: BoxShape.rectangle,
@@ -51,6 +51,7 @@ class VerticalListItemState extends State<VerticalListItem> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Container(
+                    width: (MediaQuery.of(context).size.width) * .5,
                     padding: EdgeInsets.all(10.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,7 +63,8 @@ class VerticalListItemState extends State<VerticalListItem> {
                         //child:
                         Text(
                           title,
-                          overflow: TextOverflow.ellipsis,
+                          maxLines: 2,
+                          //overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.start,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,

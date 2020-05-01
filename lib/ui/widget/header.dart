@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
-  String _headr;
+  final String _header;
 
-  Header(this._headr);
+  Header(this._header);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class Header extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.only(top: 20,bottom: 5),
         child: Text(
-          _headr,
+          _header,
           style: TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.bold,
