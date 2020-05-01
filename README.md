@@ -1,16 +1,13 @@
-# fluttermovielab3
+# MoviesApp-Flutter
 
-A new Flutter application.
+Movies application that I made it when I try to Explore and learn Flutter
 
-## Getting Started
+[Get the data from] (https://www.themoviedb.org)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Using Flutter APIs:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [provider](https://pub.dev/packages/provider) version: 4.0.5+1 
+- [rxdart](https://pub.dev/packages/rxdart) version: 0.24.0
+- [http](https://pub.dev/packages/http) version: 0.12.1 
+- [flutter_rating_bar](https://pub.dev/packages/flutter_rating_bar) version: 3.0.1+1
