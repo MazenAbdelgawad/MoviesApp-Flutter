@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:fluttermovielab4/data_access_layer/model/movie.dart';
 import 'package:fluttermovielab4/provider/home_data_provider.dart';
+import 'package:fluttermovielab4/ui/details_page.dart';
 import 'package:provider/provider.dart';
 import 'VerticalListItem.dart';
 
@@ -30,8 +31,15 @@ class VerticalList extends StatelessWidget {
         itemCount: list.length,
         shrinkWrap: false,
         itemBuilder: (context, index) {
-          return VerticalListItem(list[index].title, list[index].posterPath,
-              list[index].releaseDate, list[index].voteAverage);
+          return GestureDetector(
+            child: VerticalListItem(list[index].title, list[index].posterPath,
+                list[index].releaseDate, list[index].voteAverage),
+            onTap: () => {clickOnListItem(context,list[index])},
+          );
         });
+  }
+
+  void clickOnListItem(BuildContext context, Movie movie) {
+      Navigator.of(context).push(MaterialPageRoute(builder: (context) => DetailsPage(movie)));
   }
 }
