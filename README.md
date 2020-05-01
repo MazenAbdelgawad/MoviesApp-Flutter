@@ -2,7 +2,7 @@
 
 Movies application that I made it when I try to Explore and learn Flutter
 
-[Get the data from] (https://www.themoviedb.org)
+[Get the data from](https://www.themoviedb.org)
 
 
 ## Using Flutter APIs:
